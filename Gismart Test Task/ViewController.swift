@@ -8,12 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var OfferButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let button = GradientButton(colors : [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor])
+        button.frame = CGRect (x: 95, y: 20, width: 403, height: 88)
+        view.addSubview(button)
+        //button.center = view.center
+        button.setTitle("ACTIVATE OFFER", for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 12
     }
-
-
+    
+    
 }
 

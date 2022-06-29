@@ -13,6 +13,7 @@
 		78C84362286CDC010067E422 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C84360286CDC010067E422 /* Main.storyboard */; };
 		78C84364286CDC060067E422 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78C84363286CDC060067E422 /* Assets.xcassets */; };
 		78C84367286CDC060067E422 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C84365286CDC060067E422 /* LaunchScreen.storyboard */; };
+		78C8436F286CE4940067E422 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8436E286CE4930067E422 /* GradientButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		78C84363286CDC060067E422 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78C84366286CDC060067E422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78C84368286CDC060067E422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78C8436E286CE4930067E422 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				78C8435A286CDC010067E422 /* AppDelegate.swift */,
 				78C8435C286CDC010067E422 /* SceneDelegate.swift */,
 				78C8435E286CDC010067E422 /* ViewController.swift */,
+				78C8436E286CE4930067E422 /* GradientButton.swift */,
 				78C84360286CDC010067E422 /* Main.storyboard */,
 				78C84363286CDC060067E422 /* Assets.xcassets */,
 				78C84365286CDC060067E422 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78C8435F286CDC010067E422 /* ViewController.swift in Sources */,
+				78C8436F286CE4940067E422 /* GradientButton.swift in Sources */,
 				78C8435B286CDC010067E422 /* AppDelegate.swift in Sources */,
 				78C8435D286CDC010067E422 /* SceneDelegate.swift in Sources */,
 			);
