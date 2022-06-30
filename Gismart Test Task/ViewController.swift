@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var OfferButton: UIButton!
     
+    let timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
