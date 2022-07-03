@@ -144,7 +144,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="OfferButton" destination="TXV-sp-s9Q" id="MJr-pj-qa9"/>
+                        <outlet property="popUpOutlet" destination="TXV-sp-s9Q" id="ERk-cf-r9Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

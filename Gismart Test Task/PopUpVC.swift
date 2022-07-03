@@ -20,7 +20,9 @@ class PopUpVC: UIViewController {
         let offerMinute = "03"
         let offerSecunde = "05"
         popUpLabel.text = ("Great! Offer activated at " + "\(offerMinute)" + "\(":")" + "\(offerSecunde)" + "\(":")" + "\(offerDay)" + "\(":")")
-        popUpView.layer.cornerRadius = 50
+        popUpView.layer.cornerRadius = 25
+        popUpLabel.backgroundColor = nil
+        popUpLabel.textColor = .white
     }
     
     
