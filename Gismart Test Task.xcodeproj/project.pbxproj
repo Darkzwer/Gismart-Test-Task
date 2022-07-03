@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		782819F62871C39C00C7555D /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782819F52871C39C00C7555D /* PopUpVC.swift */; };
 		78C8435B286CDC010067E422 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8435A286CDC010067E422 /* AppDelegate.swift */; };
 		78C8435D286CDC010067E422 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8435C286CDC010067E422 /* SceneDelegate.swift */; };
 		78C8435F286CDC010067E422 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8435E286CDC010067E422 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		782819F52871C39C00C7555D /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		78C84357286CDC010067E422 /* Gismart Test Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gismart Test Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C8435A286CDC010067E422 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78C8435C286CDC010067E422 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				78C8435C286CDC010067E422 /* SceneDelegate.swift */,
 				78C8435E286CDC010067E422 /* ViewController.swift */,
 				78C8436E286CE4930067E422 /* GradientButton.swift */,
+				782819F52871C39C00C7555D /* PopUpVC.swift */,
 				78C84360286CDC010067E422 /* Main.storyboard */,
 				78C84363286CDC060067E422 /* Assets.xcassets */,
 				78C84365286CDC060067E422 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				78C8435F286CDC010067E422 /* ViewController.swift in Sources */,
 				78C8436F286CE4940067E422 /* GradientButton.swift in Sources */,
+				782819F62871C39C00C7555D /* PopUpVC.swift in Sources */,
 				78C8435B286CDC010067E422 /* AppDelegate.swift in Sources */,
 				78C8435D286CDC010067E422 /* SceneDelegate.swift in Sources */,
 			);
