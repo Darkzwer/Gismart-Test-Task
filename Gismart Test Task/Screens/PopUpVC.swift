@@ -16,10 +16,13 @@ class PopUpVC: UIViewController {
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         view.layer.cornerRadius = 30
+        
+        //let flipingCard = UIView.AnimationTransition(rawValue: mypa)
+        
         let offerDay = "00"
         let offerMinute = "03"
         let offerSecunde = "05"
-        popUpLabel.text = ("Great! Offer activated at " + "\(offerMinute)" + "\(":")" + "\(offerSecunde)" + "\(":")" + "\(offerDay)" + "\(":")")
+        popUpLabel.text = ("Offer activated at " + "\(offerMinute)" + "\(":")" + "\(offerSecunde)" + "\(":")" + "\(offerDay)" + "\(":")")
         popUpView.layer.cornerRadius = 25
         popUpLabel.backgroundColor = nil
         popUpLabel.textColor = .white
