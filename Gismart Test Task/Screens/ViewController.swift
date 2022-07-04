@@ -10,16 +10,10 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var timeTextView: UILabel!
-    @IBOutlet weak var startButton: UIButton!
     
     var seconds:Int = 0
     var timer = Timer()
     var hasStarted = false
-    
-    @IBAction func startTimer(_ sender: UIButton) {
-        if hasStarted { pauseTimer() }
-        else { startTimer() }
-    }
     
     @IBOutlet weak var popUpOutlet: UIButton!
     @IBAction func showPopUp(_ sender: UIButton) {
@@ -27,6 +21,7 @@ class ViewController: UIViewController {
         timer.invalidate()
     }
     
+    //MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         startTimer()
@@ -36,14 +31,20 @@ class ViewController: UIViewController {
     }
     
     func gradientButtonNew () {
-        let gradientLook = GradientButton(colors : [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor])
-        //popUpOutlet = gradientLook
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [
+            UIColor.systemPink.cgColor,
+            UIColor.systemBlue.cgColor,
+        ]
+        //popUpOutlet.self = gradientLayer
         popUpOutlet.center = view.center
         popUpOutlet.setTitle("ACTIVATE", for: .normal)
         popUpOutlet.clipsToBounds = true
         popUpOutlet.layer.cornerRadius = 12
     }
     
+    //MARK: - SetupGradientButton
     func gradientButtonOld () {
         let button = GradientButton(colors : [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor])
         button.frame = CGRect (x: 95, y: 20, width: 403, height: 88)
@@ -54,12 +55,19 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 12
     }
     
+    
+    //MARK: - PopScreen
     func openPopOverVC () {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "sbPopUpID") as! PopUpVC
         self.addChild(popOverVC)
         popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
         popOverVC.didMove(toParent: self)
+    }
+    
+    //MARK: - Animation
+    private func animateTimer() {
+        
     }
     
     
