@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		782819F62871C39C00C7555D /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782819F52871C39C00C7555D /* PopUpVC.swift */; };
 		782819F82872D29E00C7555D /* TimerVC+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782819F72872D29E00C7555D /* TimerVC+Ext.swift */; };
-		782819FA2872D2AD00C7555D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782819F92872D2AD00C7555D /* Alerts.swift */; };
 		782819FC2872D2B700C7555D /* TimerConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782819FB2872D2B700C7555D /* TimerConversions.swift */; };
 		78C8435B286CDC010067E422 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8435A286CDC010067E422 /* AppDelegate.swift */; };
 		78C8435D286CDC010067E422 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8435C286CDC010067E422 /* SceneDelegate.swift */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		782819F52871C39C00C7555D /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		782819F72872D29E00C7555D /* TimerVC+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerVC+Ext.swift"; sourceTree = "<group>"; };
-		782819F92872D2AD00C7555D /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		782819FB2872D2B700C7555D /* TimerConversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerConversions.swift; sourceTree = "<group>"; };
 		78C84357286CDC010067E422 /* Gismart Test Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gismart Test Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C8435A286CDC010067E422 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +45,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		782819FD2872DA5F00C7555D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				78C8435E286CDC010067E422 /* ViewController.swift */,
+				782819F52871C39C00C7555D /* PopUpVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		782819FE2872DA6F00C7555D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				78C8436E286CE4930067E422 /* GradientButton.swift */,
+				782819F72872D29E00C7555D /* TimerVC+Ext.swift */,
+				782819FB2872D2B700C7555D /* TimerConversions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		78C8434E286CDC010067E422 = {
 			isa = PBXGroup;
 			children = (
@@ -68,16 +85,12 @@
 			children = (
 				78C8435A286CDC010067E422 /* AppDelegate.swift */,
 				78C8435C286CDC010067E422 /* SceneDelegate.swift */,
-				78C8435E286CDC010067E422 /* ViewController.swift */,
-				78C8436E286CE4930067E422 /* GradientButton.swift */,
-				782819F52871C39C00C7555D /* PopUpVC.swift */,
+				782819FD2872DA5F00C7555D /* Screens */,
+				782819FE2872DA6F00C7555D /* Extensions */,
 				78C84360286CDC010067E422 /* Main.storyboard */,
 				78C84363286CDC060067E422 /* Assets.xcassets */,
 				78C84365286CDC060067E422 /* LaunchScreen.storyboard */,
 				78C84368286CDC060067E422 /* Info.plist */,
-				782819F92872D2AD00C7555D /* Alerts.swift */,
-				782819F72872D29E00C7555D /* TimerVC+Ext.swift */,
-				782819FB2872D2B700C7555D /* TimerConversions.swift */,
 			);
 			path = "Gismart Test Task";
 			sourceTree = "<group>";
@@ -159,7 +172,6 @@
 				782819FC2872D2B700C7555D /* TimerConversions.swift in Sources */,
 				782819F62871C39C00C7555D /* PopUpVC.swift in Sources */,
 				78C8435B286CDC010067E422 /* AppDelegate.swift in Sources */,
-				782819FA2872D2AD00C7555D /* Alerts.swift in Sources */,
 				78C8435D286CDC010067E422 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

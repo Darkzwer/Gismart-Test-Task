@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var timeTextView: UILabel!
     @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var resetButton: UIButton!
     
     var seconds:Int = 0
     var timer = Timer()
@@ -22,17 +21,15 @@ class ViewController: UIViewController {
         else { startTimer() }
     }
     
-    @IBAction func resetTimer(_ sender: UIButton) {
-       resetTimer()
-    }
-    
     @IBOutlet weak var popUpOutlet: UIButton!
     @IBAction func showPopUp(_ sender: UIButton) {
         openPopOverVC()
+        timer.invalidate()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startTimer()
         gradientButtonOld()
         gradientButtonNew()
     }
