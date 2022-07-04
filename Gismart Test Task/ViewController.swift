@@ -9,6 +9,23 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var timeTextView: UILabel!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
+    
+    var seconds:Int = 0
+    var timer = Timer()
+    var hasStarted = false
+    
+    @IBAction func startTimer(_ sender: UIButton) {
+        if hasStarted { pauseTimer() }
+        else { startTimer() }
+    }
+    
+    @IBAction func resetTimer(_ sender: UIButton) {
+       resetTimer()
+    }
+    
     @IBOutlet weak var popUpOutlet: UIButton!
     @IBAction func showPopUp(_ sender: UIButton) {
         openPopOverVC()
@@ -21,7 +38,12 @@ class ViewController: UIViewController {
     }
     
     func gradientButtonNew () {
+        let gradientLook = GradientButton(colors : [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor])
+        //popUpOutlet = gradientLook
+        popUpOutlet.center = view.center
         popUpOutlet.setTitle("ACTIVATE", for: .normal)
+        popUpOutlet.clipsToBounds = true
+        popUpOutlet.layer.cornerRadius = 12
     }
     
     func gradientButtonOld () {
