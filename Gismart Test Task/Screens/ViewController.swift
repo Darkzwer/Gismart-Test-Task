@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         startTimer()
         gradientButtonOld()
         gradientButtonNew()
+        view.backgroundColor = .black
     }
     
     func gradientButtonNew () {
