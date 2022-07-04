@@ -15,7 +15,7 @@ class PopUpVC: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        view.layer.cornerRadius = 30
+        //view.layer.cornerRadius = 30
         
         //let flipingCard = UIView.AnimationTransition(rawValue: mypa)
         

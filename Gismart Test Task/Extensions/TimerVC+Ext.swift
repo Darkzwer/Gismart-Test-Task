@@ -38,7 +38,7 @@ extension ViewController {
         timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(count), userInfo: nil, repeats: true)
         
-        startButton.setTitle("PAUSE", for: .normal)
+        //startButton.setTitle("PAUSE", for: .normal)
         hasStarted = true
     }
     
