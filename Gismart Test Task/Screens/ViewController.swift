@@ -19,7 +19,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var popUpOutlet: UIButton!
     
-    var seconds:Int = 0
+    //var seconds:Int = 0//первый таймер
+    var (days, hours, minutes, seconds) = (0,0,0,0)//второй таймер
+    
     var timer = Timer()
     var hasStarted = false
     
@@ -36,6 +38,7 @@ class ViewController: UIViewController {
         gradientButtonOld()
         gradientButtonNew()
         view.backgroundColor = .black
+        //startTimer2()
     }
     
     //MARK: - SetupNewGradientButton

@@ -39,11 +39,14 @@ func secondsToTime(for seconds: Int) -> String {
             }
         }
         
+        //добавлялка нулей
         let daysString = days < 10 ? "0\(days)" : "\(days)"//мой код
         let hourString = hours < 10 ? "0\(hours)" : "\(hours)"
         let minuteString = minutes < 10 ? "0\(minutes)" : "\(minutes)"
         let secondString = eSeconds < 10 ? "0\(eSeconds)" : "\(eSeconds)"
         
+        print(minuteString)
+        print(secondString)
         return "\(daysString):\(hourString):\(minuteString):\(secondString)"//добавлена строка
     }
     
@@ -53,6 +56,7 @@ enum TMError: Error {
     case err
 }
 
+//конвертирует полученный текст в числа
 func timeToSeconds(for time: String) throws -> Int {
     
     let metrics = time.split(separator: ":")
