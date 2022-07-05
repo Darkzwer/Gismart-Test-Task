@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         timeTextView.alpha = 0
         animateText()
 //        secondsLabel.fadeTransition(1)
+        secondsLabel.font = UIFont.systemFont(ofSize: 5)
         
     }
     

@@ -28,6 +28,10 @@ class PopUpVC: UIViewController {
         guard let minFromVC = self.minFromVC else { return }
         guard let hourFromVC = self.hourFromVC else { return }
         guard let daysFromVC = self.daysFromVC else { return }
+        
+        if daysFromVC == "00" {
+            print("Label is nil")
+        }
         popUpLabel.text = "Offer activated at \(secFromVC)"//сетит даные в лейбл из первого контроллера
         popUpLabel.text = ("Offer activated at " + "\(daysFromVC)" + "\(":")" + "\(hourFromVC)" + "\(":")" + "\(minFromVC)" + "\(":")" + "\(secFromVC)")
     }
