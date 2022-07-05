@@ -41,7 +41,9 @@ class ViewController: UIViewController {
         gradientButtonOld()
         gradientButtonNew()
         view.backgroundColor = .black
-        //startTimer2()
+        timeTextView.alpha = 0
+        animateText()
+        
     }
     
     //MARK: - SetupNewGradientButton
@@ -84,19 +86,33 @@ class ViewController: UIViewController {
     
     
     //MARK: - PopScreenOpen
-//    func openPopOverVC () {
-//        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "sbPopUpID") as! PopUpVC
-//        self.addChild(popOverVC)
-//        popOverVC.view.frame = self.view.frame
-//        self.view.addSubview(popOverVC.view)
-//        popOverVC.didMove(toParent: self)
-//    }
+    //    func openPopOverVC () {
+    //        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "sbPopUpID") as! PopUpVC
+    //        self.addChild(popOverVC)
+    //        popOverVC.view.frame = self.view.frame
+    //        self.view.addSubview(popOverVC.view)
+    //        popOverVC.didMove(toParent: self)
+    //    }
     
     //MARK: - Animation
-    private func animateTimer() {
+    func animateText () {
         
+        UIView.animate(withDuration: 1.0, animations: {
+            self.timeTextView.alpha = 1.0
+            
+        }, completion: {
+            (completed : Bool) -> Void in
+            
+            UIView.animate(withDuration: 1.0, delay: 3.0,
+                           options: UIView.AnimationOptions.curveLinear,
+                           animations: {
+                self.timeTextView.alpha = 0
+            }, completion: {
+                (completed : Bool) -> Void in
+                self.animateText()
+            })
+        })
     }
-    
     //MARK: - Conventor
     func secondsToTime(for seconds: Int) -> String {
         var eSeconds = seconds
@@ -144,11 +160,11 @@ class ViewController: UIViewController {
         }
         
     }
-
+    
     enum TMError: Error {
         case err
     }
-
+    
     //conventer
     func timeToSeconds(for time: String) throws -> Int {
         
