@@ -30,6 +30,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="showPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tds-VZ-BDh"/>
+                                    <segue destination="2Lj-XV-UBq" kind="show" id="62g-8L-quP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST-MINUTE CHANCE! to claim your offer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmz-0p-R79">
@@ -231,6 +232,7 @@
                             <constraint firstItem="sjx-S5-XVe" firstAttribute="centerX" secondItem="hmu-eY-dvr" secondAttribute="centerX" id="rvT-Mn-bx9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jl2-Yk-RmN"/>
                     <connections>
                         <outlet property="popUpLabel" destination="1oe-jB-9Wk" id="3Qm-a8-q8h"/>
                         <outlet property="popUpView" destination="sjx-S5-XVe" id="hxh-BH-qAd"/>

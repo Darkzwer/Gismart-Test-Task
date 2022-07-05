@@ -72,8 +72,14 @@ class ViewController: UIViewController {
     
     //MARK: - PrepareForSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let transportData = segue.destination as? PopUpVC else { return }
-        transportData.secFromVC = timeTextView.text
+        guard let transportData1 = segue.destination as? PopUpVC else { return }
+        transportData1.secFromVC = secondsLabel.text
+        guard let transportData2 = segue.destination as? PopUpVC else { return }
+        transportData2.minFromVC = minutesLabel.text
+        guard let transportData3 = segue.destination as? PopUpVC else { return }
+        transportData3.hourFromVC = hoursLabel.text
+        guard let transportData4 = segue.destination as? PopUpVC else { return }
+        transportData4.daysFromVC = daysLabel.text
     }
     
     

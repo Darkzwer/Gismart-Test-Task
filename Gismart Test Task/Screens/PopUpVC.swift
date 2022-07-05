@@ -12,6 +12,7 @@ class PopUpVC: UIViewController {
     var secFromVC: String?//take data from 1VC
     var minFromVC: String?
     var hourFromVC: String?
+    var daysFromVC: String?
     
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var popUpLabel: UILabel!
@@ -23,15 +24,20 @@ class PopUpVC: UIViewController {
         
         popUpSetup()
         
-        //guard let secFromVC = self.secFromVC else { return }//removes optional label
-        popUpLabel.text = "Hello data from first VC, \(secFromVC)"//сетит даные в лейбл из первого контроллера
+        guard let secFromVC = self.secFromVC else { return }//removes optional label
+        guard let minFromVC = self.minFromVC else { return }
+        guard let hourFromVC = self.hourFromVC else { return }
+        guard let daysFromVC = self.daysFromVC else { return }
+        popUpLabel.text = "Offer activated at \(secFromVC)"//сетит даные в лейбл из первого контроллера
+        popUpLabel.text = ("Offer activated at " + "\(daysFromVC)" + "\(":")" + "\(hourFromVC)" + "\(":")" + "\(minFromVC)" + "\(":")" + "\(secFromVC)")
         print(secFromVC)
+        print(minFromVC)
+        print(hourFromVC)
     }
     
     func popUpSetup () {
         popUpView.layer.cornerRadius = 25
         popUpLabel.backgroundColor = nil
         popUpLabel.textColor = .white
-        print(secFromVC)
     }
 }
