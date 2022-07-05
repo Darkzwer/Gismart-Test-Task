@@ -7,7 +7,6 @@
 
 import UIKit
 
-//этот код не вызывается на старте а срабатывает при нажатии кнопок
 extension ViewController {
     
     func startTimer() {

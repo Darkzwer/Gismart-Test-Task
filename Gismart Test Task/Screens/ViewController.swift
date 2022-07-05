@@ -20,8 +20,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var popUpOutlet: UIButton!
     
     @IBOutlet weak var segueoutlet: UILabel!
-    var seconds:Int = 0//первый таймер
-    //var (days, hours, minutes, seconds) = (0,0,0,0)//второй таймер
+    
+    //MARK: - Vars
+    //var seconds:Int = 0//первый таймер
+    var (days, hours, minutes, seconds) = (0,0,0,0)//второй таймер
     
     var timer = Timer()
     var hasStarted = false
@@ -70,14 +72,8 @@ class ViewController: UIViewController {
     
     //MARK: - PrepareForSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //guard let transportData = segue.destination as? PopUpVC else { return }
-        //transportData.activatedTimeData = timeTextView.text
         guard let transportData = segue.destination as? PopUpVC else { return }
-        transportData.secFromVC = segueoutlet.text
-//        guard let min = segue.destination as? PopUpVC else { return }
-//        min.minFromVC = minutesLabel.text
-//        guard let hour = segue.destination as? PopUpVC else { return }
-//        hour.hourFromVC = hoursLabel.text
+        transportData.secFromVC = timeTextView.text
     }
     
     
@@ -128,8 +124,7 @@ class ViewController: UIViewController {
                 }
             }
             
-            //добавлялка нулей
-            let daysString = days < 10 ? "0\(days)" : "\(days)"//мой код
+            let daysString = days < 10 ? "0\(days)" : "\(days)"
             let hourString = hours < 10 ? "0\(hours)" : "\(hours)"
             let minuteString = minutes < 10 ? "0\(minutes)" : "\(minutes)"
             let secondString = eSeconds < 10 ? "0\(eSeconds)" : "\(eSeconds)"
@@ -139,7 +134,7 @@ class ViewController: UIViewController {
             minutesLabel.text = minuteString
             secondsLabel.text = secondString
             
-            return "\(daysString):\(hourString):\(minuteString):\(secondString)"//добавлена строка
+            return "\(daysString):\(hourString):\(minuteString):\(secondString)"
         }
         
     }
@@ -148,7 +143,7 @@ class ViewController: UIViewController {
         case err
     }
 
-    //конвертирует полученный текст в числа
+    //conventer
     func timeToSeconds(for time: String) throws -> Int {
         
         let metrics = time.split(separator: ":")
@@ -158,7 +153,7 @@ class ViewController: UIViewController {
         guard let minutes = Int(metrics[2]) else { throw TMError.err }//есть модификации
         guard let seconds = Int(metrics[3]) else { throw TMError.err }//есть модификации
         
-        return days*86400 + hours*3600 + minutes*60 + seconds//дописана строка про то что сколько в дне секунд
+        return days*86400 + hours*3600 + minutes*60 + seconds
     }
     
     

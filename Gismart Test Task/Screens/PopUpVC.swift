@@ -9,7 +9,7 @@ import UIKit
 
 class PopUpVC: UIViewController {
     
-    var secFromVC: String?//переменная получающая время из первого контроллера
+    var secFromVC: String?//take data from 1VC
     var minFromVC: String?
     var hourFromVC: String?
     
@@ -23,9 +23,8 @@ class PopUpVC: UIViewController {
         
         popUpSetup()
         
-        //guard let secFromVC = self.secFromVC else { return }//не меняет лейбл если данные не придут
+        //guard let secFromVC = self.secFromVC else { return }//removes optional label
         popUpLabel.text = "Hello data from first VC, \(secFromVC)"//сетит даные в лейбл из первого контроллера
-        //popUpLabel.text = secFromVC
         print(secFromVC)
     }
     
