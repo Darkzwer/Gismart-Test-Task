@@ -9,8 +9,12 @@ import UIKit
 
 class PopUpVC: UIViewController {
     
+    var activatedTimeData: String?//переменная получающая время из первого контроллера
+    
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var popUpLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +30,9 @@ class PopUpVC: UIViewController {
         popUpView.layer.cornerRadius = 25
         popUpLabel.backgroundColor = nil
         popUpLabel.textColor = .white
+        
+        //guard let activatedTimeData = self.activatedTimeData else { return }//не меняет лейбл если данные не придут
+        popUpLabel.text = "Hello data from first VC, \(activatedTimeData)"//сетит даные в лейбл из первого контроллера
     }
     
     

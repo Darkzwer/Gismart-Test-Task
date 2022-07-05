@@ -57,9 +57,9 @@
 		782819FE2872DA6F00C7555D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				78C8436E286CE4930067E422 /* GradientButton.swift */,
-				782819F72872D29E00C7555D /* TimerVC+Ext.swift */,
 				782819FB2872D2B700C7555D /* TimerConversions.swift */,
+				782819F72872D29E00C7555D /* TimerVC+Ext.swift */,
+				78C8436E286CE4930067E422 /* GradientButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

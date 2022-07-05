@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             UIColor.systemBlue.cgColor,
         ]
         //popUpOutlet.self = gradientLayer
-        popUpOutlet.center = view.center
+        //popUpOutlet.center = view.center
         popUpOutlet.setTitle("ACTIVATE", for: .normal)
         popUpOutlet.clipsToBounds = true
         popUpOutlet.layer.cornerRadius = 12
@@ -57,11 +57,12 @@ class ViewController: UIViewController {
     
     //MARK: - PrepareForSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.destination is PopUpVC else { return }
+        guard let transportData = segue.destination as? PopUpVC else { return }
+        transportData.activatedTimeData = timeTextView.text
     }
     
     
-    //MARK: - PopScreen
+    //MARK: - PopScreenOpen
     func openPopOverVC () {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "sbPopUpID") as! PopUpVC
         self.addChild(popOverVC)
