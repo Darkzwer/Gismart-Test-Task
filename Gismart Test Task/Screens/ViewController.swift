@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .black
         timeTextView.alpha = 0
         animateText()
+//        secondsLabel.fadeTransition(1)
         
     }
     
@@ -113,6 +114,7 @@ class ViewController: UIViewController {
             })
         })
     }
+    
     //MARK: - Conventor
     func secondsToTime(for seconds: Int) -> String {
         var eSeconds = seconds
@@ -146,6 +148,7 @@ class ViewController: UIViewController {
                 }
             }
             
+            secondsLabel.fadeTransition(1.5)
             let daysString = days < 10 ? "0\(days)" : "\(days)"
             let hourString = hours < 10 ? "0\(hours)" : "\(hours)"
             let minuteString = minutes < 10 ? "0\(minutes)" : "\(minutes)"
@@ -154,7 +157,9 @@ class ViewController: UIViewController {
             daysLabel.text = daysString
             hoursLabel.text = hourString
             minutesLabel.text = minuteString
+            //secondsLabel.fadeTransition(0.4)
             secondsLabel.text = secondString
+            //secondsLabel.fadeTransition(0.9f)
             
             return "\(daysString):\(hourString):\(minuteString):\(secondString)"
         }
@@ -175,9 +180,23 @@ class ViewController: UIViewController {
         guard let minutes = Int(metrics[2]) else { throw TMError.err }//есть модификации
         guard let seconds = Int(metrics[3]) else { throw TMError.err }//есть модификации
         
+        //secondsLabel.fadeTransition(0.4)
+        //secondsLabel.text = "text"
+        secondsLabel.fadeTransition(1)
         return days*86400 + hours*3600 + minutes*60 + seconds
     }
     
     
+    
 }
 
+extension UIView {
+    func fadeTransition(_ duration:CFTimeInterval) {
+        let animation = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name:
+            CAMediaTimingFunctionName.easeInEaseOut)
+        animation.type = CATransitionType.fade
+        animation.duration = duration
+        layer.add(animation, forKey: CATransitionType.fade.rawValue)
+    }
+}
