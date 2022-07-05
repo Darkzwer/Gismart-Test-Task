@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     
     //MARK: - @IBAction
     @IBAction func showPopUp(_ sender: UIButton) {
-        openPopOverVC()
+        //openPopOverVC()
         timer.invalidate()
     }
     
@@ -84,13 +84,13 @@ class ViewController: UIViewController {
     
     
     //MARK: - PopScreenOpen
-    func openPopOverVC () {
-        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "sbPopUpID") as! PopUpVC
-        self.addChild(popOverVC)
-        popOverVC.view.frame = self.view.frame
-        self.view.addSubview(popOverVC.view)
-        popOverVC.didMove(toParent: self)
-    }
+//    func openPopOverVC () {
+//        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "sbPopUpID") as! PopUpVC
+//        self.addChild(popOverVC)
+//        popOverVC.view.frame = self.view.frame
+//        self.view.addSubview(popOverVC.view)
+//        popOverVC.didMove(toParent: self)
+//    }
     
     //MARK: - Animation
     private func animateTimer() {
