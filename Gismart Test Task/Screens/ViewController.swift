@@ -9,13 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //MARK: - @IBOutlet
     @IBOutlet weak var timeTextView: UILabel!
+    
+    @IBOutlet weak var daysLabel: UILabel!
+    @IBOutlet weak var hoursLabel: UILabel!
+    @IBOutlet weak var minutesLabel: UILabel!
+    @IBOutlet weak var secondsLabel: UILabel!
+    
+    @IBOutlet weak var popUpOutlet: UIButton!
     
     var seconds:Int = 0
     var timer = Timer()
     var hasStarted = false
     
-    @IBOutlet weak var popUpOutlet: UIButton!
+    //MARK: - @IBAction
     @IBAction func showPopUp(_ sender: UIButton) {
         openPopOverVC()
         timer.invalidate()
@@ -30,6 +38,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .black
     }
     
+    //MARK: - SetupNewGradientButton
     func gradientButtonNew () {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
