@@ -11,7 +11,7 @@ import UIKit
 extension ViewController {
     func pauseTimer() {
         timer.invalidate()
-        startButton.setTitle("RUN", for: .normal)
+        //startButton.setTitle("RUN", for: .normal)
         
         hasStarted = false
     }

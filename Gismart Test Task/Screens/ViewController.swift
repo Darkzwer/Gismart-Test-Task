@@ -55,6 +55,11 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 12
     }
     
+    //MARK: - PrepareForSegue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.destination is PopUpVC else { return }
+    }
+    
     
     //MARK: - PopScreen
     func openPopOverVC () {
