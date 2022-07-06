@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var popUpOutlet: UIButton!//Button to 2 vc
     @IBOutlet weak var LAST: UILabel!
     @IBOutlet weak var stackView: UIStackView!
-    
+    @IBOutlet weak var OFF: UILabel!
     //MARK: - Vars
     //var seconds:Int = 0//первый таймер
     var (days, hours, minutes, seconds) = (0,0,0,0)//второй таймер
@@ -86,13 +86,13 @@ class ViewController: UIViewController {
     //MARK: - FadeAnimation
     func animateText () {
         UIView.animate(withDuration: 1.0, animations: {
-            self.timeTextView.alpha = 1.0
+            self.OFF.alpha = 1.0
         }, completion: {
             (completed : Bool) -> Void in
             UIView.animate(withDuration: 1.0, delay: 3.0,
                            options: UIView.AnimationOptions.curveLinear,
                            animations: {
-                self.timeTextView.alpha = 0
+                self.OFF.alpha = 0
             }, completion: {
                 (completed : Bool) -> Void in
                 self.animateText()
