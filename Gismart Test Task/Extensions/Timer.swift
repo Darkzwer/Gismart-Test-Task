@@ -9,6 +9,13 @@ import UIKit
 
 extension ViewController {
     
+    func pauseTimer() {
+        timer.invalidate()
+        //startButton.setTitle("START", for: .normal)
+        
+        hasStarted = false
+    }
+    
     func startTimer() {
         
         guard let timerInfo = timeTextView.text else { return }
@@ -20,6 +27,15 @@ extension ViewController {
         }
         
         guard seconds > 0 else { return }
+        
+        timer.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(count), userInfo: nil, repeats: true)
+        
+        //startButton.setTitle("PAUSE", for: .normal)
+        hasStarted = true
+        
+        //secondsLabel.isEditable = false
+        //resetButton.isHidden = false
         
         timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(count), userInfo: nil, repeats: true)

@@ -39,11 +39,18 @@ class ViewController: UIViewController {
         animateText()
         timerSetup()
         timeTextView.alpha = 0
-        timeTextView.text = "00:20:00:00"
+        timeTextView.text = "00:24:00:00"
         view.backgroundColor = .black
         popUpOutlet.applyGradient(colours: [.systemIndigo, .systemPink])
         LAST.font = UIFont.systemFont(ofSize: 35, weight: .semibold)
         
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(myObserverMethod),
+                                               name:UIApplication.didEnterBackgroundNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(applicationWillEnterForeground),
+                                               name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
     //MARK: - SetupNewGradientButtonNEW
@@ -98,6 +105,14 @@ class ViewController: UIViewController {
                 self.animateText()
             })
         })
+    }
+    
+    @objc func myObserverMethod() {
+        pauseTimer()
+    }
+    
+    @objc func applicationWillEnterForeground(notification: Notification) {
+        startTimer()
     }
     
     
