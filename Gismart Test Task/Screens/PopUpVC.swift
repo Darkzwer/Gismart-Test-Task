@@ -29,12 +29,23 @@ class PopUpVC: UIViewController {
         guard let hourFromVC = self.hourFromVC else { return }
         guard let daysFromVC = self.daysFromVC else { return }
         
-        if daysFromVC == "00" {
-            print("Label is nil")
+        
+        if daysFromVC == "00" && hourFromVC != "00" {
+           /* If condition is true then print the following */
+            popUpLabel.text = ("Offer activated at " + "\(hourFromVC)" + "\(":")" + "\(minFromVC)" + "\(":")" + "\(secFromVC)")
+        } else if hourFromVC == "00" && minFromVC != "00" {
+           /* If condition is true then print the following */
+            popUpLabel.text = ("Offer activated at " + "\(minFromVC)" + "\(":")" + "\(secFromVC)")
+        } else if hourFromVC == "00" && minFromVC == "00" && secFromVC != "00" {
+           /* If condition is false then print the following */
+            popUpLabel.text = ("Offer activated at " + "\(secFromVC)")
+        } else {
+            print("Value of variable varA is \(hourFromVC)");
         }
-        popUpLabel.text = "Offer activated at \(secFromVC)"//сетит даные в лейбл из первого контроллера
-        popUpLabel.text = ("Offer activated at " + "\(daysFromVC)" + "\(":")" + "\(hourFromVC)" + "\(":")" + "\(minFromVC)" + "\(":")" + "\(secFromVC)")
+        
+        
     }
+    
     
     func popUpSetup () {
         popUpView.layer.cornerRadius = 25

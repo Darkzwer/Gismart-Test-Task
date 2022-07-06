@@ -10,6 +10,7 @@ import UIKit
 extension ViewController {
     
     func startTimer() {
+        
         guard let timerInfo = timeTextView.text else { return }
         
         do {
@@ -30,11 +31,6 @@ extension ViewController {
     @objc func count() {
         seconds -= 1
         timeTextView.text = secondsToTime(for: seconds)//пишет результат в лейбл
-        
-        //secondsLabel.text = secondsToTime(for: seconds)
-        //minutesLabel.text = secondsToTime(for: minutes)
-        //hoursLabel.text = secondsToTime(for: hours)
-        //daysLabel.text = secondsToTime(for: days)
         
         if timeTextView.text == "99:00:00:00" || timeTextView.text == "00:00:00:00" {
             //Alerts.showBasicAlert(title: "Timer has finished!", message: "The timer has finished counting down from the specified time period.", on: self)

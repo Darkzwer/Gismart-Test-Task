@@ -10,27 +10,21 @@ import UIKit
 class ViewController: UIViewController {
     
     //MARK: - @IBOutlet
-    @IBOutlet weak var timeTextView: UILabel!
-    
+    @IBOutlet weak var timeTextView: UILabel!//mainTimerOld
     @IBOutlet weak var daysLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
-    
-    @IBOutlet weak var popUpOutlet: UIButton!
-    
-    @IBOutlet weak var segueoutlet: UILabel!
+    @IBOutlet weak var popUpOutlet: UIButton!//Button to 2 vc
     
     //MARK: - Vars
     //var seconds:Int = 0//первый таймер
     var (days, hours, minutes, seconds) = (0,0,0,0)//второй таймер
-    
     var timer = Timer()
     var hasStarted = false
     
     //MARK: - @IBAction
     @IBAction func showPopUp(_ sender: UIButton) {
-        //openPopOverVC()
         timer.invalidate()
     }
     
@@ -43,8 +37,8 @@ class ViewController: UIViewController {
         view.backgroundColor = .black
         timeTextView.alpha = 0
         animateText()
-//        secondsLabel.fadeTransition(1)
-        secondsLabel.font = UIFont.systemFont(ofSize: 5)
+        timerSetup()
+        timeTextView.text = "00:20:00:00"
         
     }
     
@@ -56,11 +50,10 @@ class ViewController: UIViewController {
             UIColor.systemPink.cgColor,
             UIColor.systemBlue.cgColor,
         ]
-        //popUpOutlet.self = gradientLayer
-        //popUpOutlet.center = view.center
-        popUpOutlet.setTitle("ACTIVATE", for: .normal)
+        popUpOutlet.setTitle("ACTIVATE OFFER", for: .normal)
         popUpOutlet.clipsToBounds = true
         popUpOutlet.layer.cornerRadius = 12
+        //popUpOutletfont = UIFont.semi
     }
     
     //MARK: - SetupGradientButton
@@ -86,25 +79,12 @@ class ViewController: UIViewController {
         transportData4.daysFromVC = daysLabel.text
     }
     
-    
-    //MARK: - PopScreenOpen
-    //    func openPopOverVC () {
-    //        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "sbPopUpID") as! PopUpVC
-    //        self.addChild(popOverVC)
-    //        popOverVC.view.frame = self.view.frame
-    //        self.view.addSubview(popOverVC.view)
-    //        popOverVC.didMove(toParent: self)
-    //    }
-    
-    //MARK: - Animation
+    //MARK: - FadeAnimation
     func animateText () {
-        
         UIView.animate(withDuration: 1.0, animations: {
             self.timeTextView.alpha = 1.0
-            
         }, completion: {
             (completed : Bool) -> Void in
-            
             UIView.animate(withDuration: 1.0, delay: 3.0,
                            options: UIView.AnimationOptions.curveLinear,
                            animations: {
@@ -114,6 +94,25 @@ class ViewController: UIViewController {
                 self.animateText()
             })
         })
+    }
+    
+    
+    //MARK: - TimerSetup
+    func timerSetup() {
+        secondsLabel.fadeTransition(0.8)
+        secondsLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        minutesLabel.fadeTransition(1)
+        minutesLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        hoursLabel.fadeTransition(1)
+        hoursLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        daysLabel.fadeTransition(1)
+        daysLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        
+    }
+    
+    //MARK: - GradientButtonSetup
+    func gradientButtonSetup() {
+        //popUpOutlet.
     }
     
     //MARK: - Conventor
@@ -158,9 +157,7 @@ class ViewController: UIViewController {
             daysLabel.text = daysString
             hoursLabel.text = hourString
             minutesLabel.text = minuteString
-            //secondsLabel.fadeTransition(0.4)
             secondsLabel.text = secondString
-            //secondsLabel.fadeTransition(0.9f)
             
             return "\(daysString):\(hourString):\(minuteString):\(secondString)"
         }
@@ -176,14 +173,11 @@ class ViewController: UIViewController {
         
         let metrics = time.split(separator: ":")
         
-        guard let days = Int(metrics[0]) else { throw TMError.err }//мой код
-        guard let hours = Int(metrics[1]) else { throw TMError.err }//есть модификации
-        guard let minutes = Int(metrics[2]) else { throw TMError.err }//есть модификации
-        guard let seconds = Int(metrics[3]) else { throw TMError.err }//есть модификации
+        guard let days = Int(metrics[0]) else { throw TMError.err }
+        guard let hours = Int(metrics[1]) else { throw TMError.err }
+        guard let minutes = Int(metrics[2]) else { throw TMError.err }
+        guard let seconds = Int(metrics[3]) else { throw TMError.err }
         
-        //secondsLabel.fadeTransition(0.4)
-        //secondsLabel.text = "text"
-        secondsLabel.fadeTransition(1)
         return days*86400 + hours*3600 + minutes*60 + seconds
     }
     
@@ -195,7 +189,7 @@ extension UIView {
     func fadeTransition(_ duration:CFTimeInterval) {
         let animation = CATransition()
         animation.timingFunction = CAMediaTimingFunction(name:
-            CAMediaTimingFunctionName.easeInEaseOut)
+                                                            CAMediaTimingFunctionName.easeInEaseOut)
         animation.type = CATransitionType.fade
         animation.duration = duration
         layer.add(animation, forKey: CATransitionType.fade.rawValue)
