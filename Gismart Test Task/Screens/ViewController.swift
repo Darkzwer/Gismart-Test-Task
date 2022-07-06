@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var popUpOutlet: UIButton!//Button to 2 vc
     @IBOutlet weak var LAST: UILabel!
-    
+    @IBOutlet weak var stackView: UIStackView!
     
     //MARK: - Vars
     //var seconds:Int = 0//первый таймер
@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         view.backgroundColor = .black
         popUpOutlet.applyGradient(colours: [.lightGray, .systemPink])
         LAST.font = UIFont.systemFont(ofSize: 35, weight: .semibold)
-        //self.view.backgroundColor = colo
         
     }
     
@@ -106,12 +105,21 @@ class ViewController: UIViewController {
     func timerSetup() {
         secondsLabel.fadeTransition(0.8)
         secondsLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        secondsLabel.clipsToBounds = true
+        secondsLabel.layer.cornerRadius = 12
         minutesLabel.fadeTransition(1)
         minutesLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        minutesLabel.clipsToBounds = true
+        minutesLabel.layer.cornerRadius = 12
         hoursLabel.fadeTransition(1)
         hoursLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        hoursLabel.clipsToBounds = true
+        hoursLabel.layer.cornerRadius = 12
         daysLabel.fadeTransition(1)
         daysLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        daysLabel.clipsToBounds = true
+        daysLabel.layer.cornerRadius = 12
+        stackView.backgroundColor = nil
         
     }
     
