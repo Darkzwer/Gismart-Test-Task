@@ -31,13 +31,10 @@ class PopUpVC: UIViewController {
         
         
         if daysFromVC == "00" && hourFromVC != "00" {
-           /* If condition is true then print the following */
             popUpLabel.text = ("Offer activated at " + "\(hourFromVC)" + "\(":")" + "\(minFromVC)" + "\(":")" + "\(secFromVC)")
         } else if hourFromVC == "00" && minFromVC != "00" {
-           /* If condition is true then print the following */
             popUpLabel.text = ("Offer activated at " + "\(minFromVC)" + "\(":")" + "\(secFromVC)")
         } else if hourFromVC == "00" && minFromVC == "00" && secFromVC != "00" {
-           /* If condition is false then print the following */
             popUpLabel.text = ("Offer activated at " + "\(secFromVC)")
         } else {
             print("Value of variable varA is \(hourFromVC)");
@@ -47,7 +44,7 @@ class PopUpVC: UIViewController {
     }
     
     
-    func popUpSetup () {
+    func popUpSetup() {
         popUpView.layer.cornerRadius = 25
         popUpLabel.backgroundColor = nil
         popUpLabel.textColor = .white

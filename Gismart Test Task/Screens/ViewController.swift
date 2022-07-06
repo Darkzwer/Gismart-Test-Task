@@ -41,12 +41,13 @@ class ViewController: UIViewController {
         timeTextView.alpha = 0
         timeTextView.text = "00:20:00:00"
         view.backgroundColor = .black
-        popUpOutlet.applyGradient(colours: [.blue, .systemPink])
+        popUpOutlet.applyGradient(colours: [.lightGray, .systemPink])
         LAST.font = UIFont.systemFont(ofSize: 35, weight: .semibold)
+        //self.view.backgroundColor = colo
         
     }
     
-    //MARK: - SetupNewGradientButtonNEWNEW
+    //MARK: - SetupNewGradientButtonNEW
     func gradientButtonNew () {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
@@ -185,10 +186,18 @@ class ViewController: UIViewController {
         return days*86400 + hours*3600 + minutes*60 + seconds
     }
     
-    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
     
 }
 
+//MARK: - FadeExtension
 extension UIView {
     func fadeTransition(_ duration:CFTimeInterval) {
         let animation = CATransition()
@@ -200,12 +209,12 @@ extension UIView {
     }
 }
 
+//MARK: - GradientExtension
 extension UIView {
 
     func applyGradient(colours: [UIColor]) -> CAGradientLayer {
         return self.applyGradient(colours: colours, locations: nil)
     }
-
 
     func applyGradient(colours: [UIColor], locations: [NSNumber]?) -> CAGradientLayer {
         let gradient: CAGradientLayer = CAGradientLayer()
