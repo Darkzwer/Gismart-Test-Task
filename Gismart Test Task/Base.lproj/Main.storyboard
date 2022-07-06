@@ -172,6 +172,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="LAST" destination="Dmz-0p-R79" id="cBj-bh-gXm"/>
                         <outlet property="daysLabel" destination="E96-ZG-TYE" id="H2u-x1-pTi"/>
                         <outlet property="hoursLabel" destination="NkD-ZE-ctm" id="7UC-Xu-e4T"/>
                         <outlet property="minutesLabel" destination="p22-vL-OZA" id="9Bs-pD-ze3"/>

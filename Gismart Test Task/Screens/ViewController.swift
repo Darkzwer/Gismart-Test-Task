@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var popUpOutlet: UIButton!//Button to 2 vc
+    @IBOutlet weak var LAST: UILabel!
+    
     
     //MARK: - Vars
     //var seconds:Int = 0//первый таймер
@@ -32,17 +34,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startTimer()
-        gradientButtonOld()
+        //gradientButtonOld()
         gradientButtonNew()
-        view.backgroundColor = .black
-        timeTextView.alpha = 0
         animateText()
         timerSetup()
+        timeTextView.alpha = 0
         timeTextView.text = "00:20:00:00"
+        view.backgroundColor = .black
+        popUpOutlet.applyGradient(colours: [.blue, .systemPink])
+        LAST.font = UIFont.systemFont(ofSize: 35, weight: .semibold)
         
     }
     
-    //MARK: - SetupNewGradientButton
+    //MARK: - SetupNewGradientButtonNEWNEW
     func gradientButtonNew () {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
@@ -51,9 +55,9 @@ class ViewController: UIViewController {
             UIColor.systemBlue.cgColor,
         ]
         popUpOutlet.setTitle("ACTIVATE OFFER", for: .normal)
+        popUpOutlet.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         popUpOutlet.clipsToBounds = true
         popUpOutlet.layer.cornerRadius = 12
-        //popUpOutletfont = UIFont.semi
     }
     
     //MARK: - SetupGradientButton
@@ -69,14 +73,14 @@ class ViewController: UIViewController {
     
     //MARK: - PrepareForSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let transportData1 = segue.destination as? PopUpVC else { return }
-        transportData1.secFromVC = secondsLabel.text
-        guard let transportData2 = segue.destination as? PopUpVC else { return }
-        transportData2.minFromVC = minutesLabel.text
-        guard let transportData3 = segue.destination as? PopUpVC else { return }
-        transportData3.hourFromVC = hoursLabel.text
-        guard let transportData4 = segue.destination as? PopUpVC else { return }
-        transportData4.daysFromVC = daysLabel.text
+        guard let sec = segue.destination as? PopUpVC else { return }
+        sec.secFromVC = secondsLabel.text
+        guard let min = segue.destination as? PopUpVC else { return }
+        min.minFromVC = minutesLabel.text
+        guard let hour = segue.destination as? PopUpVC else { return }
+        hour.hourFromVC = hoursLabel.text
+        guard let day = segue.destination as? PopUpVC else { return }
+        day.daysFromVC = daysLabel.text
     }
     
     //MARK: - FadeAnimation
@@ -97,7 +101,7 @@ class ViewController: UIViewController {
     }
     
     
-    //MARK: - TimerSetup
+    //MARK: - TimerLookSetup
     func timerSetup() {
         secondsLabel.fadeTransition(0.8)
         secondsLabel.font = UIFont.boldSystemFont(ofSize: 20)
@@ -193,5 +197,22 @@ extension UIView {
         animation.type = CATransitionType.fade
         animation.duration = duration
         layer.add(animation, forKey: CATransitionType.fade.rawValue)
+    }
+}
+
+extension UIView {
+
+    func applyGradient(colours: [UIColor]) -> CAGradientLayer {
+        return self.applyGradient(colours: colours, locations: nil)
+    }
+
+
+    func applyGradient(colours: [UIColor], locations: [NSNumber]?) -> CAGradientLayer {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = self.bounds
+        gradient.colors = colours.map { $0.cgColor }
+        gradient.locations = locations
+        self.layer.insertSublayer(gradient, at: 0)
+        return gradient
     }
 }
