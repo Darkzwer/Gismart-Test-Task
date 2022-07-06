@@ -121,33 +121,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="xmark.app" catalog="system"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-ns-GQX">
-                                <rect key="frame" x="511" y="12" width="304" height="156"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST-MINUTE CHANCE! to claim your offer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="Dmz-0p-R79">
-                                        <rect key="frame" x="0.0" y="0.0" width="304" height="52"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90% OFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8f-5p-BiW">
-                                        <rect key="frame" x="0.0" y="52" width="304" height="52"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="39"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For true music fans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUR-O5-7AV">
-                                        <rect key="frame" x="0.0" y="104" width="304" height="52"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eLP-dl-fIR">
                                 <rect key="frame" x="613.5" y="381" width="122.5" height="12"/>
                                 <subviews>
@@ -174,17 +147,40 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GhO-io-S2w">
+                                <rect key="frame" x="517" y="0.0" width="330.5" height="156"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="LAST-MINUTE CHANCE! to claim your offer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHE-Ee-1gj">
+                                        <rect key="frame" x="0.0" y="0.0" width="330.5" height="115"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="90% OFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf6-kF-eC9">
+                                        <rect key="frame" x="0.0" y="115" width="330.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="For true music fans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNF-c8-g8i">
+                                        <rect key="frame" x="0.0" y="135.5" width="330.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eLP-dl-fIR" secondAttribute="bottom" id="02Q-05-ng0"/>
                             <constraint firstItem="RQW-4F-9vi" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0z4-An-W6F"/>
+                            <constraint firstItem="GHd-34-eOR" firstAttribute="top" secondItem="GhO-io-S2w" secondAttribute="bottom" constant="20" id="1Db-Lv-M0U"/>
                             <constraint firstItem="GHd-34-eOR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2if-RV-pYx"/>
                             <constraint firstItem="sAv-yf-3dC" firstAttribute="top" secondItem="GHd-34-eOR" secondAttribute="bottom" constant="16" id="3Ve-cF-w1c"/>
-                            <constraint firstItem="F0F-ns-GQX" firstAttribute="leading" secondItem="RQW-4F-9vi" secondAttribute="trailing" constant="44" id="5GL-Er-eAo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TXV-sp-s9Q" secondAttribute="trailing" constant="20" id="7UM-my-FpD"/>
-                            <constraint firstItem="F0F-ns-GQX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="7sO-6e-F9D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GHd-34-eOR" secondAttribute="trailing" constant="43.5" id="8ei-Wd-3ML"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RQW-4F-9vi" secondAttribute="bottom" constant="39" id="HE2-zJ-Rsm"/>
                             <constraint firstItem="RQW-4F-9vi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="IFE-9i-u3C"/>
@@ -195,11 +191,10 @@
                             <constraint firstItem="GHd-34-eOR" firstAttribute="centerX" secondItem="sAv-yf-3dC" secondAttribute="centerX" id="WEA-6q-LLi"/>
                             <constraint firstItem="eLP-dl-fIR" firstAttribute="centerX" secondItem="GHd-34-eOR" secondAttribute="centerX" id="Zqr-me-21p"/>
                             <constraint firstItem="GHd-34-eOR" firstAttribute="centerX" secondItem="TXV-sp-s9Q" secondAttribute="centerX" id="a5k-GM-iEC"/>
+                            <constraint firstItem="GhO-io-S2w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cqK-1x-aix"/>
                             <constraint firstItem="TXV-sp-s9Q" firstAttribute="top" secondItem="sAv-yf-3dC" secondAttribute="bottom" constant="10" id="f71-O3-sYE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v8f-5p-BiW" secondAttribute="trailing" constant="37" id="hx9-VI-59v"/>
                             <constraint firstItem="76c-EM-yjk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="k4P-ER-9cR"/>
                             <constraint firstItem="RQW-4F-9vi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oB4-Zg-qIm"/>
-                            <constraint firstItem="GHd-34-eOR" firstAttribute="top" secondItem="F0F-ns-GQX" secondAttribute="bottom" constant="8" id="rpC-Kr-3AO"/>
                             <constraint firstItem="76c-EM-yjk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uXJ-VS-lds"/>
                         </constraints>
                     </view>
@@ -226,42 +221,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="to claim your offer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7f-hd-KtJ">
-                                <rect key="frame" x="490" y="247" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5hK-2X-Rqb">
-                                <rect key="frame" x="416" y="68" width="343" height="98"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-ns-GQX">
+                                <rect key="frame" x="437" y="190" width="343" height="108"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST-MINUTE CHANCE! to claim your offer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="gUN-XH-LxM">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST-MINUTE CHANCE! to claim your offer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dmz-0p-R79">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="36"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="wtU-Xq-Flx"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90% OFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xX6-pC-u2t">
-                                        <rect key="frame" x="0.0" y="44" width="343" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90% OFF" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8f-5p-BiW">
+                                        <rect key="frame" x="0.0" y="36" width="343" height="36"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For true music fans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOk-YQ-DDb">
-                                        <rect key="frame" x="0.0" y="80" width="343" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For true music fans" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUR-O5-7AV">
+                                        <rect key="frame" x="0.0" y="72" width="343" height="36"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QLC-Vp-SrQ"/>
