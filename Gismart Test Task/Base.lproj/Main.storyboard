@@ -143,24 +143,24 @@
                                 <buttonConfiguration key="configuration" style="plain" image="xmark.app" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-ns-GQX">
-                                <rect key="frame" x="511" y="12" width="343" height="156"/>
+                                <rect key="frame" x="511" y="27" width="343" height="141"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST-MINUTE CHANCE! to claim your offer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Dmz-0p-R79">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="47"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90% OFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="v8f-5p-BiW">
-                                        <rect key="frame" x="0.0" y="52" width="343" height="52"/>
+                                        <rect key="frame" x="0.0" y="47" width="343" height="47"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="39"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For true music fans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="SUR-O5-7AV">
-                                        <rect key="frame" x="0.0" y="104" width="343" height="52"/>
+                                        <rect key="frame" x="0.0" y="94" width="343" height="47"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -179,7 +179,7 @@
                             <constraint firstItem="sAv-yf-3dC" firstAttribute="top" secondItem="GHd-34-eOR" secondAttribute="bottom" constant="16" id="3Ve-cF-w1c"/>
                             <constraint firstItem="F0F-ns-GQX" firstAttribute="leading" secondItem="RQW-4F-9vi" secondAttribute="trailing" constant="44" id="5GL-Er-eAo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TXV-sp-s9Q" secondAttribute="trailing" constant="20" id="7UM-my-FpD"/>
-                            <constraint firstItem="F0F-ns-GQX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="950" constant="12" id="7sO-6e-F9D"/>
+                            <constraint firstItem="F0F-ns-GQX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="950" constant="12" id="7sO-6e-F9D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GHd-34-eOR" secondAttribute="trailing" constant="43.5" id="8ei-Wd-3ML"/>
                             <constraint firstItem="F0F-ns-GQX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="2" id="EZj-f4-IwH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RQW-4F-9vi" secondAttribute="bottom" constant="39" id="HE2-zJ-Rsm"/>
