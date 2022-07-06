@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         timeTextView.text = "00:20:00:00"
         view.backgroundColor = .black
         popUpOutlet.applyGradient(colours: [.lightGray, .systemPink])
-        //LAST.font = UIFont.systemFont(ofSize: 35, weight: .semibold)
+        LAST.font = UIFont.systemFont(ofSize: 35, weight: .semibold)
         
     }
     
