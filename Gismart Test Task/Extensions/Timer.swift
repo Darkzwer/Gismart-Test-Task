@@ -33,7 +33,8 @@ extension ViewController {
         timeTextView.text = secondsToTime(for: seconds)//пишет результат в лейбл
         
         if timeTextView.text == "99:00:00:00" || timeTextView.text == "00:00:00:00" {
-            //Alerts.showBasicAlert(title: "Timer has finished!", message: "The timer has finished counting down from the specified time period.", on: self)
+            timer.invalidate()
+            Alerts.showBasicAlert(title: "Timer has finished!", message: "The timer has finished counting down from the specified time period.", on: self)
         }
         
     }
