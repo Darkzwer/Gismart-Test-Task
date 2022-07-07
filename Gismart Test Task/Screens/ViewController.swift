@@ -19,9 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var LAST: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var OFF: UILabel!
+    
     //MARK: - Vars
     //var seconds:Int = 0//первый таймер
-    var (days, hours, minutes, seconds) = (0,0,0,0)//второй таймер
+    //var (days, hours, minutes, seconds) = (0,0,0,0)//второй таймер
     var timer = Timer()
     var hasStarted = false
     

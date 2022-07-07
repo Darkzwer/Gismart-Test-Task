@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		780371B8287649330085BFAC /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780371B7287649330085BFAC /* Alerts.swift */; };
+		780371BC2876C7F30085BFAC /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780371BB2876C7F30085BFAC /* AppConstants.swift */; };
 		782819F62871C39C00C7555D /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782819F52871C39C00C7555D /* PopUpVC.swift */; };
 		782819F82872D29E00C7555D /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782819F72872D29E00C7555D /* Timer.swift */; };
 		78C8435B286CDC010067E422 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8435A286CDC010067E422 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		780371B7287649330085BFAC /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		780371BB2876C7F30085BFAC /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		782819F52871C39C00C7555D /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		782819F72872D29E00C7555D /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		78C84357286CDC010067E422 /* Gismart Test Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gismart Test Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,9 +59,9 @@
 		782819FE2872DA6F00C7555D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				780371B7287649330085BFAC /* Alerts.swift */,
 				782819F72872D29E00C7555D /* Timer.swift */,
 				78C8436E286CE4930067E422 /* GradientButton.swift */,
-				780371B7287649330085BFAC /* Alerts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				78C8435A286CDC010067E422 /* AppDelegate.swift */,
+				780371BB2876C7F30085BFAC /* AppConstants.swift */,
 				78C8435C286CDC010067E422 /* SceneDelegate.swift */,
 				782819FD2872DA5F00C7555D /* Screens */,
 				782819FE2872DA6F00C7555D /* Extensions */,
@@ -169,6 +172,7 @@
 				782819F82872D29E00C7555D /* Timer.swift in Sources */,
 				78C8435F286CDC010067E422 /* ViewController.swift in Sources */,
 				78C8436F286CE4940067E422 /* GradientButton.swift in Sources */,
+				780371BC2876C7F30085BFAC /* AppConstants.swift in Sources */,
 				782819F62871C39C00C7555D /* PopUpVC.swift in Sources */,
 				78C8435B286CDC010067E422 /* AppDelegate.swift in Sources */,
 				780371B8287649330085BFAC /* Alerts.swift in Sources */,
