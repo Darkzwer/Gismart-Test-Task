@@ -9,4 +9,5 @@ import Foundation
 
 enum AppConstans {
     static var (days, hours, minutes, seconds) = (0,0,0,0)//второй таймер
+    static var hasStarted = false
 }

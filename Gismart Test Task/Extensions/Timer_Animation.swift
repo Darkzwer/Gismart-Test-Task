@@ -11,7 +11,7 @@ extension ViewController {
     
     func pauseTimer() {
         timer.invalidate()
-        hasStarted = false
+        AppConstans.hasStarted = false
     }
     
     func startTimer() {
@@ -29,14 +29,14 @@ extension ViewController {
         timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(count), userInfo: nil, repeats: true)
         
-        hasStarted = true
+        AppConstans.hasStarted = true
         
         //secondsLabel.isEditable = false
         
         timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(count), userInfo: nil, repeats: true)
         
-        hasStarted = true
+        AppConstans.hasStarted = true
     }
     
     @objc func count() {
@@ -51,4 +51,33 @@ extension ViewController {
     }
     
     
+}
+
+//MARK: - FadeExtension
+extension UIView {
+    func fadeTransition(_ duration:CFTimeInterval) {
+        let animation = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name:
+                                                            CAMediaTimingFunctionName.easeInEaseOut)
+        animation.type = CATransitionType.fade
+        animation.duration = duration
+        layer.add(animation, forKey: CATransitionType.fade.rawValue)
+    }
+}
+
+//MARK: - GradientExtension
+extension UIView {
+
+    func applyGradient(colours: [UIColor]) -> CAGradientLayer {
+        return self.applyGradient(colours: colours, locations: nil)
+    }
+
+    func applyGradient(colours: [UIColor], locations: [NSNumber]?) -> CAGradientLayer {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = self.bounds
+        gradient.colors = colours.map { $0.cgColor }
+        gradient.locations = locations
+        self.layer.insertSublayer(gradient, at: 0)
+        return gradient
+    }
 }

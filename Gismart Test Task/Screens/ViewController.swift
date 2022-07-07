@@ -22,9 +22,7 @@ class ViewController: UIViewController {
     
     //MARK: - Vars
     //var seconds:Int = 0//первый таймер
-    //var (days, hours, minutes, seconds) = (0,0,0,0)//второй таймер
     var timer = Timer()
-    var hasStarted = false
     
     //MARK: - @IBAction
     @IBAction func showPopUp(_ sender: UIButton) {
@@ -45,6 +43,7 @@ class ViewController: UIViewController {
         popUpOutlet.applyGradient(colours: [.systemIndigo, .systemPink])
         LAST.font = UIFont.systemFont(ofSize: 35, weight: .semibold)
         
+        //Observers
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(myObserverMethod),
                                                name:UIApplication.didEnterBackgroundNotification, object: nil)
@@ -108,10 +107,11 @@ class ViewController: UIViewController {
         })
     }
     
+    
+    //MARK: - Start & Pause
     @objc func myObserverMethod() {
         pauseTimer()
     }
-    
     @objc func applicationWillEnterForeground(notification: Notification) {
         startTimer()
     }
@@ -139,10 +139,6 @@ class ViewController: UIViewController {
         
     }
     
-    //MARK: - GradientButtonSetup
-    func gradientButtonSetup() {
-        //popUpOutlet.
-    }
     
     //MARK: - Conventor
     func secondsToTime(for seconds: Int) -> String {
@@ -219,33 +215,4 @@ class ViewController: UIViewController {
         )
     }
     
-}
-
-//MARK: - FadeExtension
-extension UIView {
-    func fadeTransition(_ duration:CFTimeInterval) {
-        let animation = CATransition()
-        animation.timingFunction = CAMediaTimingFunction(name:
-                                                            CAMediaTimingFunctionName.easeInEaseOut)
-        animation.type = CATransitionType.fade
-        animation.duration = duration
-        layer.add(animation, forKey: CATransitionType.fade.rawValue)
-    }
-}
-
-//MARK: - GradientExtension
-extension UIView {
-
-    func applyGradient(colours: [UIColor]) -> CAGradientLayer {
-        return self.applyGradient(colours: colours, locations: nil)
-    }
-
-    func applyGradient(colours: [UIColor], locations: [NSNumber]?) -> CAGradientLayer {
-        let gradient: CAGradientLayer = CAGradientLayer()
-        gradient.frame = self.bounds
-        gradient.colors = colours.map { $0.cgColor }
-        gradient.locations = locations
-        self.layer.insertSublayer(gradient, at: 0)
-        return gradient
-    }
 }
