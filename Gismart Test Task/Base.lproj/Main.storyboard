@@ -141,9 +141,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76c-EM-yjk">
                                 <rect key="frame" x="60" y="0.0" width="45.5" height="31"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="xmark.app" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" title="X"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-ns-GQX">
                                 <rect key="frame" x="472" y="43" width="382" height="125"/>
@@ -186,6 +186,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GHd-34-eOR" secondAttribute="trailing" constant="55" id="8ei-Wd-3ML"/>
                             <constraint firstItem="GHd-34-eOR" firstAttribute="centerX" secondItem="F0F-ns-GQX" secondAttribute="centerX" id="9rb-SM-xZ9"/>
                             <constraint firstItem="F0F-ns-GQX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="2" id="EZj-f4-IwH"/>
+                            <constraint firstItem="76c-EM-yjk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GuX-Jq-Gjz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RQW-4F-9vi" secondAttribute="bottom" id="HE2-zJ-Rsm"/>
                             <constraint firstItem="RQW-4F-9vi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IFE-9i-u3C"/>
                             <constraint firstAttribute="trailing" secondItem="lLD-z5-bdc" secondAttribute="trailing" constant="1" id="Lze-ut-wTj"/>
@@ -202,6 +203,7 @@
                             <constraint firstItem="GHd-34-eOR" firstAttribute="top" secondItem="F0F-ns-GQX" secondAttribute="bottom" constant="8" id="rpC-Kr-3AO"/>
                             <constraint firstItem="76c-EM-yjk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uXJ-VS-lds"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4h5-Jb-0ec" secondAttribute="bottom" constant="12" id="xSq-c5-eKX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="76c-EM-yjk" secondAttribute="trailing" constant="746.5" id="yT0-6z-1xR"/>
                             <constraint firstItem="MYa-J2-dUZ" firstAttribute="top" secondItem="TXV-sp-s9Q" secondAttribute="bottom" constant="20" id="zlk-vg-GDR"/>
                         </constraints>
                     </view>
@@ -276,7 +278,6 @@
     </scenes>
     <resources>
         <image name="music" width="650" height="315"/>
-        <image name="xmark.app" catalog="system" width="128" height="114"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

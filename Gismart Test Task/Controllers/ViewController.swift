@@ -39,7 +39,9 @@ class ViewController: UIViewController {
         timerSetup()
         timeTextView.alpha = 0
         timeTextView.text = "00:24:00:00"
+        setupAnimation()
         view.backgroundColor = .black
+        view.pushTransition(1.5)
         popUpOutlet.applyGradient(colours: [.systemIndigo, .systemPink])
         LAST.font = UIFont.systemFont(ofSize: 35, weight: .semibold)
         
@@ -72,7 +74,6 @@ class ViewController: UIViewController {
         let button = GradientButton(colors : [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor])
         button.frame = CGRect (x: 95, y: 20, width: 403, height: 88)
         view.addSubview(button)
-        //button.center = view.center
         button.setTitle("ACTIVATE OFFER", for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 12
@@ -107,6 +108,11 @@ class ViewController: UIViewController {
         })
     }
     
+    func setupAnimation() {
+        daysLabel.pushTransition(0.5)
+        minutesLabel.pushTransition(0.5)
+        hoursLabel.pushTransition(0.5)
+    }
     
     //MARK: - Start & Pause
     @objc func myObserverMethod() {
@@ -115,7 +121,6 @@ class ViewController: UIViewController {
     @objc func applicationWillEnterForeground(notification: Notification) {
         startTimer()
     }
-    
     
     //MARK: - TimerLookSetup
     func timerSetup() {
@@ -147,7 +152,7 @@ class ViewController: UIViewController {
         var eSeconds = seconds
         var minutes = 0
         var hours = 0
-        var days = 0// мой код
+        var days = 0
         
         if seconds < 60 {
             return seconds < 10 ? "00:00:00:0\(seconds)" : "00:00:00:\(seconds)"
@@ -175,11 +180,10 @@ class ViewController: UIViewController {
                 }
             }
             
-            //secondsLabel.fadeTransition(1.5)
+            minutesLabel.fadeTransition(0.5)
+            hoursLabel.fadeTransition(0.5)
+            daysLabel.fadeTransition(0.5)
             secondsLabel.pushTransition(0.4)
-            minutesLabel.fadeTransition(1)
-            hoursLabel.fadeTransition(1)
-            daysLabel.fadeTransition(1)
             let daysString = days < 10 ? "0\(days)" : "\(days)"
             let hourString = hours < 10 ? "0\(hours)" : "\(hours)"
             let minuteString = minutes < 10 ? "0\(minutes)" : "\(minutes)"

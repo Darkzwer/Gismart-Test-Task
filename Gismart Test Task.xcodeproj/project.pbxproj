@@ -66,13 +66,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		782819FD2872DA5F00C7555D /* Screens */ = {
+		782819FD2872DA5F00C7555D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				78C8435E286CDC010067E422 /* ViewController.swift */,
 				782819F52871C39C00C7555D /* PopUpVC.swift */,
 			);
-			path = Screens;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		782819FE2872DA6F00C7555D /* Extensions */ = {
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				780371BD2876CA0C0085BFAC /* Application Layer */,
-				782819FD2872DA5F00C7555D /* Screens */,
+				782819FD2872DA5F00C7555D /* Controllers */,
 				780371BE2876CB930085BFAC /* Models */,
 				782819FE2872DA6F00C7555D /* Extensions */,
 				78C84360286CDC010067E422 /* Main.storyboard */,
