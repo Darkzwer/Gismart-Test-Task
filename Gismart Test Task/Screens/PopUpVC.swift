@@ -32,6 +32,8 @@ class PopUpVC: UIViewController {
         
         if daysFromVC == "00" && hourFromVC != "00" {
             popUpLabel.text = ("Offer activated at " + "\(hourFromVC)" + "\(":")" + "\(minFromVC)" + "\(":")" + "\(secFromVC)")
+        } else if daysFromVC != "00" {
+            popUpLabel.text = ("Offer activated at " + "\(daysFromVC)" + "\(":")" + "\(hourFromVC)" + "\(":")" + "\(minFromVC)" + "\(":")" + "\(secFromVC)")
         } else if hourFromVC == "00" && minFromVC != "00" {
             popUpLabel.text = ("Offer activated at " + "\(minFromVC)" + "\(":")" + "\(secFromVC)")
         } else if hourFromVC == "00" && minFromVC == "00" && secFromVC != "00" {
