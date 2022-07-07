@@ -119,19 +119,21 @@ class ViewController: UIViewController {
     
     //MARK: - TimerLookSetup
     func timerSetup() {
-        secondsLabel.fadeTransition(0.8)
+        //secondsLabel.pushTransition(0.4)
+        //secondsLabel.text = "AppConstans.seconds"
+        //secondsLabel.fadeTransition(0.8)
         secondsLabel.font = UIFont.boldSystemFont(ofSize: 20)
         secondsLabel.clipsToBounds = true
         secondsLabel.layer.cornerRadius = 12
-        minutesLabel.fadeTransition(1)
+        //minutesLabel.fadeTransition(1)
         minutesLabel.font = UIFont.boldSystemFont(ofSize: 20)
         minutesLabel.clipsToBounds = true
         minutesLabel.layer.cornerRadius = 12
-        hoursLabel.fadeTransition(1)
+        //hoursLabel.fadeTransition(1)
         hoursLabel.font = UIFont.boldSystemFont(ofSize: 20)
         hoursLabel.clipsToBounds = true
         hoursLabel.layer.cornerRadius = 12
-        daysLabel.fadeTransition(1)
+        //daysLabel.fadeTransition(1)
         daysLabel.font = UIFont.boldSystemFont(ofSize: 20)
         daysLabel.clipsToBounds = true
         daysLabel.layer.cornerRadius = 12
@@ -173,7 +175,8 @@ class ViewController: UIViewController {
                 }
             }
             
-            secondsLabel.fadeTransition(1.5)
+            //secondsLabel.fadeTransition(1.5)
+            secondsLabel.pushTransition(0.4)
             let daysString = days < 10 ? "0\(days)" : "\(days)"
             let hourString = hours < 10 ? "0\(hours)" : "\(hours)"
             let minuteString = minutes < 10 ? "0\(minutes)" : "\(minutes)"
@@ -206,6 +209,14 @@ class ViewController: UIViewController {
         return days*86400 + hours*3600 + minutes*60 + seconds
     }
     
+//    func animationcount () {
+//        if let aLabel = secondsLabel {
+//            aLabel.pushTransition(0.4)
+//            aLabel.text = "\(count)"
+//            count += 1
+//        }
+//    }
+    
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
@@ -215,4 +226,15 @@ class ViewController: UIViewController {
         )
     }
     
+}
+
+extension UIView {
+    func pushTransition(_ duration:CFTimeInterval) {
+        let animation:CATransition = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        animation.type = CATransitionType.push
+        animation.subtype = CATransitionSubtype.fromTop
+        animation.duration = duration
+        layer.add(animation, forKey: kCATransition)
+    }
 }
