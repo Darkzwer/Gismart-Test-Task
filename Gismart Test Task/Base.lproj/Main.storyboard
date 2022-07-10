@@ -221,6 +221,7 @@
                         <outlet property="secondsLabel" destination="J9k-4D-ohl" id="QxE-WB-Ox0"/>
                         <outlet property="stackView" destination="GHd-34-eOR" id="4FS-CW-tbt"/>
                         <outlet property="timeTextView" destination="lLD-z5-bdc" id="hT9-Ms-bQt"/>
+                        <outlet property="trueMusicFans" destination="SUR-O5-7AV" id="XFw-iP-6Yc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
