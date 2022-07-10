@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music" translatesAutoresizingMaskIntoConstraints="NO" id="RQW-4F-9vi">
-                                <rect key="frame" x="44" y="0.0" width="404" height="393"/>
+                                <rect key="frame" x="44" y="0.0" width="348" height="393"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GHd-34-eOR">
@@ -96,9 +96,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXV-sp-s9Q">
-                                <rect key="frame" x="572" y="260" width="182.5" height="50"/>
+                                <rect key="frame" x="536" y="260" width="254.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="254.5" id="Gpn-Vf-koT"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="wtz-GG-Fq6"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -177,7 +178,7 @@
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="uZu-0R-rr1" firstAttribute="top" secondItem="TXV-sp-s9Q" secondAttribute="bottom" constant="20" id="0L9-ER-yLE"/>
-                            <constraint firstItem="F0F-ns-GQX" firstAttribute="leading" secondItem="RQW-4F-9vi" secondAttribute="trailing" constant="24" id="0gN-NS-NFM"/>
+                            <constraint firstItem="F0F-ns-GQX" firstAttribute="leading" secondItem="RQW-4F-9vi" secondAttribute="trailing" constant="80" id="0gN-NS-NFM"/>
                             <constraint firstItem="RQW-4F-9vi" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0z4-An-W6F"/>
                             <constraint firstItem="GHd-34-eOR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2if-RV-pYx"/>
                             <constraint firstItem="sAv-yf-3dC" firstAttribute="top" secondItem="GHd-34-eOR" secondAttribute="bottom" constant="16" id="3Ve-cF-w1c"/>
