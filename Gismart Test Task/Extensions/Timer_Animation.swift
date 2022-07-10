@@ -41,7 +41,8 @@ extension ViewController {
     
     @objc func count() {
         AppConstans.seconds -= 1
-        timeTextView.text = secondsToTime(for: AppConstans.seconds)//пишет результат в лейбл
+        timeTextView.text = secondsToTime(for: AppConstans.seconds)
+        //minutesLabel.text = secondsToTime(for: AppConstans.seconds)
         
         if timeTextView.text == "99:00:00:00" || timeTextView.text == "00:00:00:00" {
             timer.invalidate()
@@ -53,12 +54,11 @@ extension ViewController {
     
 }
 
-//MARK: - FadeAnimation & PushAnimation
+//MARK: - FadeAnimation & PushAnimation Extension
 extension UIView {
     func fadeTransition(_ duration:CFTimeInterval) {
         let animation = CATransition()
-        animation.timingFunction = CAMediaTimingFunction(name:
-                                                            CAMediaTimingFunctionName.easeInEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         animation.type = CATransitionType.fade
         animation.duration = duration
         layer.add(animation, forKey: CATransitionType.fade.rawValue)
@@ -72,11 +72,11 @@ extension UIView {
         animation.type = CATransitionType.push
         animation.subtype = CATransitionSubtype.fromTop
         animation.duration = duration
-        layer.add(animation, forKey: kCATransition)
+        layer.add(animation, forKey: CATransitionType.push.rawValue)
     }
 }
 
-//MARK: - GradientExtension
+//MARK: - Gradient Extension
 extension UIView {
 
     func applyGradient(colours: [UIColor]) -> CAGradientLayer {

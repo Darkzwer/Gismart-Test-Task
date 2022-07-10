@@ -9,14 +9,14 @@ import UIKit
 
 class PopUpVC: UIViewController {
     
-    var secFromVC: String?//take data from 1VC
+    //take data from 1VC
+    var secFromVC: String?
     var minFromVC: String?
     var hourFromVC: String?
     var daysFromVC: String?
     
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var popUpLabel: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

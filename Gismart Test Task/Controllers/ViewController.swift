@@ -180,10 +180,12 @@ class ViewController: UIViewController {
                 }
             }
             
-            minutesLabel.fadeTransition(0.5)
-            hoursLabel.fadeTransition(0.5)
-            daysLabel.fadeTransition(0.5)
             secondsLabel.pushTransition(0.4)
+            
+            minutesLabel.fadeTransition(0.4)
+            hoursLabel.fadeTransition(0.4)
+            daysLabel.fadeTransition(0.4)
+            
             let daysString = days < 10 ? "0\(days)" : "\(days)"
             let hourString = hours < 10 ? "0\(hours)" : "\(hours)"
             let minuteString = minutes < 10 ? "0\(minutes)" : "\(minutes)"
