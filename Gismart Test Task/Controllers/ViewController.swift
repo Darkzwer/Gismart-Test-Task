@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .black
         view.pushTransition(1.5)
         popUpOutlet.applyGradient(colours: [.systemIndigo, .systemPink])
-        LAST.font = UIFont.systemFont(ofSize: 35, weight: .semibold)
+        LAST.font = UIFont.semibold35()
         
         //Observers
         NotificationCenter.default.addObserver(self,
