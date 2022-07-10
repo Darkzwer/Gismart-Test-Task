@@ -50,5 +50,6 @@ class PopUpVC: UIViewController {
         popUpView.layer.cornerRadius = 25
         popUpLabel.backgroundColor = nil
         popUpLabel.textColor = .white
+        popUpView.doGlowAnimation(withColor: .white)
     }
 }

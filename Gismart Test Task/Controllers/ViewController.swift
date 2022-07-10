@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var LAST: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var OFF: UILabel!
+    @IBOutlet weak var trueMusicFans: UILabel!
     
     //MARK: - Vars
     //var seconds:Int = 0//первый таймер
@@ -44,6 +45,8 @@ class ViewController: UIViewController {
         view.pushTransition(1.5)
         popUpOutlet.applyGradient(colours: [.systemIndigo, .systemPink])
         LAST.font = UIFont.semibold(fontSize: 35)
+        OFF.font = UIFont.black(fontSize: 55)
+        trueMusicFans.font = UIFont.semibold(fontSize: 15)
         
         //Observers
         NotificationCenter.default.addObserver(self,
