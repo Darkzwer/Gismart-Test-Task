@@ -12,6 +12,7 @@
 		782819F62871C39C00C7555D /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782819F52871C39C00C7555D /* PopUpVC.swift */; };
 		782819F82872D29E00C7555D /* Timer_Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782819F72872D29E00C7555D /* Timer_Animation.swift */; };
 		7832298D287B629C006EBBB9 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7832298C287B629C006EBBB9 /* UIFont.swift */; };
+		7832298F287B6D35006EBBB9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7832298E287B6D35006EBBB9 /* UIColor.swift */; };
 		78C8435B286CDC010067E422 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8435A286CDC010067E422 /* AppDelegate.swift */; };
 		78C8435D286CDC010067E422 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8435C286CDC010067E422 /* SceneDelegate.swift */; };
 		78C8435F286CDC010067E422 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C8435E286CDC010067E422 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		782819F52871C39C00C7555D /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		782819F72872D29E00C7555D /* Timer_Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer_Animation.swift; sourceTree = "<group>"; };
 		7832298C287B629C006EBBB9 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		7832298E287B6D35006EBBB9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		78C84357286CDC010067E422 /* Gismart Test Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gismart Test Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C8435A286CDC010067E422 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78C8435C286CDC010067E422 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				7832298C287B629C006EBBB9 /* UIFont.swift */,
+				7832298E287B6D35006EBBB9 /* UIColor.swift */,
 				782819F72872D29E00C7555D /* Timer_Animation.swift */,
 			);
 			path = Extensions;
@@ -197,6 +200,7 @@
 				780371B8287649330085BFAC /* Alerts.swift in Sources */,
 				78C8435D286CDC010067E422 /* SceneDelegate.swift in Sources */,
 				7832298D287B629C006EBBB9 /* UIFont.swift in Sources */,
+				7832298F287B6D35006EBBB9 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
