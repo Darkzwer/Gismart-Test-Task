@@ -20,9 +20,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var OFF: UILabel!
     @IBOutlet weak var trueMusicFans: UILabel!
+    @IBOutlet weak var hundreOfSongs: UILabel!
+    @IBOutlet weak var PRT: UILabel!
     
     //MARK: - Vars
-    //var seconds:Int = 0//первый таймер
+    //var seconds:Int = 0
     var timer = Timer()
     
     //MARK: - @IBAction
@@ -33,6 +35,8 @@ class ViewController: UIViewController {
     //MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
+        view.pushTransition(1.8)
         startTimer()
         //gradientButtonOld()
         gradientButtonNew()
@@ -41,8 +45,6 @@ class ViewController: UIViewController {
         timeTextView.alpha = 0
         timeTextView.text = "00:24:00:00"
         setupAnimation()
-        view.backgroundColor = .black
-        view.pushTransition(1.8)
         popUpOutlet.applyGradient(colours: [.systemIndigo, .systemPink])
         LAST.font = UIFont.semibold(fontSize: 35)
         OFF.font = UIFont.black(fontSize: 55)
@@ -50,6 +52,16 @@ class ViewController: UIViewController {
         pauseStartObservers()
         fontSize()
         
+    }
+    
+    //MARK: - SetupGradientButton
+    func gradientButtonOld () {
+        let button = GradientButton(colors : [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor])
+        button.frame = CGRect (x: 95, y: 20, width: 403, height: 88)
+        view.addSubview(button)
+        button.setTitle("ACTIVATE OFFER", for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 12
     }
     
     //MARK: - SetupNewGradientButtonNEW
@@ -64,16 +76,6 @@ class ViewController: UIViewController {
         popUpOutlet.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         popUpOutlet.clipsToBounds = true
         popUpOutlet.layer.cornerRadius = 12
-    }
-    
-    //MARK: - SetupGradientButton
-    func gradientButtonOld () {
-        let button = GradientButton(colors : [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor])
-        button.frame = CGRect (x: 95, y: 20, width: 403, height: 88)
-        view.addSubview(button)
-        button.setTitle("ACTIVATE OFFER", for: .normal)
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 12
     }
     
     //MARK: - PrepareForSegue
@@ -125,15 +127,14 @@ class ViewController: UIViewController {
             LAST.font = UIFont.semibold(fontSize: 35)
             OFF.font = UIFont.black(fontSize: 80)
             trueMusicFans.font = UIFont.semibold(fontSize: 20)
+            popUpOutlet.translatesAutoresizingMaskIntoConstraints = false
+            popUpOutlet.frame.size = CGSize(width: 403.0, height: 88.0)
             
         }
     }
     
     //MARK: - TimerLookSetup
     func timerSetup() {
-        //secondsLabel.pushTransition(0.4)
-        //secondsLabel.text = "AppConstans.seconds"
-        //secondsLabel.fadeTransition(0.8)
         secondsLabel.pushTransition(0.4)
         secondsLabel.font = UIFont.boldSystemFont(ofSize: 20)
         secondsLabel.clipsToBounds = true
@@ -151,9 +152,7 @@ class ViewController: UIViewController {
         daysLabel.clipsToBounds = true
         daysLabel.layer.cornerRadius = 12
         stackView.backgroundColor = nil
-        
     }
-    
     
     //MARK: - Conventor
     func secondsToTime(for seconds: Int) -> String {
@@ -174,7 +173,7 @@ class ViewController: UIViewController {
                 eSeconds -= 60
             }
             
-            while minutes >= 60 {//мой код
+            while minutes >= 60 {
                 hours += 1
                 minutes -= 60
             }
@@ -224,15 +223,6 @@ class ViewController: UIViewController {
         
         return days*86400 + hours*3600 + minutes*60 + seconds
     }
-    
-//    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
-//        return UIColor(
-//            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-//            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-//            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-//            alpha: CGFloat(1.0)
-//        )
-//    }
     
     //MARK: - Observers
     func pauseStartObservers () {

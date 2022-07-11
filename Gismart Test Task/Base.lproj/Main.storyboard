@@ -209,8 +209,10 @@
                     <connections>
                         <outlet property="LAST" destination="Dmz-0p-R79" id="cBj-bh-gXm"/>
                         <outlet property="OFF" destination="v8f-5p-BiW" id="RqK-0d-kh9"/>
+                        <outlet property="PRT" destination="uZu-0R-rr1" id="abD-vl-rFL"/>
                         <outlet property="daysLabel" destination="E96-ZG-TYE" id="H2u-x1-pTi"/>
                         <outlet property="hoursLabel" destination="NkD-ZE-ctm" id="7UC-Xu-e4T"/>
+                        <outlet property="hundreOfSongs" destination="sAv-yf-3dC" id="iBV-Ta-AQn"/>
                         <outlet property="minutesLabel" destination="p22-vL-OZA" id="9Bs-pD-ze3"/>
                         <outlet property="popUpOutlet" destination="TXV-sp-s9Q" id="ERk-cf-r9Z"/>
                         <outlet property="secondsLabel" destination="J9k-4D-ohl" id="QxE-WB-Ox0"/>

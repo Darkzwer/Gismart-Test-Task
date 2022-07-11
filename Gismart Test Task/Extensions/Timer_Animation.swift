@@ -31,8 +31,6 @@ extension ViewController {
         
         AppConstans.hasStarted = true
         
-        //secondsLabel.isEditable = false
-        
         timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(count), userInfo: nil, repeats: true)
         
@@ -42,7 +40,6 @@ extension ViewController {
     @objc func count() {
         AppConstans.seconds -= 1
         timeTextView.text = secondsToTime(for: AppConstans.seconds)
-        //minutesLabel.text = secondsToTime(for: AppConstans.seconds)
         
         if timeTextView.text == "99:00:00:00" || timeTextView.text == "00:00:00:00" {
             timer.invalidate()
