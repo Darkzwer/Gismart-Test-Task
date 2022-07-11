@@ -48,6 +48,7 @@ class ViewController: UIViewController {
         OFF.font = UIFont.black(fontSize: 55)
         trueMusicFans.font = UIFont.semibold(fontSize: 15)
         pauseStartObservers()
+        fontSize()
         
     }
     
@@ -116,6 +117,16 @@ class ViewController: UIViewController {
     }
     @objc func applicationWillEnterForeground(notification: Notification) {
         startTimer()
+    }
+    
+    func fontSize () {
+        if UIScreen.main.bounds.size.height >= 820 {
+            // iPad
+            LAST.font = UIFont.semibold(fontSize: 35)
+            OFF.font = UIFont.black(fontSize: 80)
+            trueMusicFans.font = UIFont.semibold(fontSize: 20)
+            
+        }
     }
     
     //MARK: - TimerLookSetup
