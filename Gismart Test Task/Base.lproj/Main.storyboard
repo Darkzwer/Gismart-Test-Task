@@ -109,7 +109,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="showPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tds-VZ-BDh"/>
-                                    <segue destination="2Lj-XV-UBq" kind="show" id="62g-8L-quP"/>
+                                    <segue destination="2Lj-XV-UBq" kind="presentation" identifier="toPopUpVC" id="62g-8L-quP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="uZu-0R-rr1">

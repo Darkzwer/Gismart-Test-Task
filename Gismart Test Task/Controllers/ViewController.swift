@@ -42,20 +42,13 @@ class ViewController: UIViewController {
         timeTextView.text = "00:24:00:00"
         setupAnimation()
         view.backgroundColor = .black
-        view.pushTransition(1.5)
+        view.pushTransition(1.8)
         popUpOutlet.applyGradient(colours: [.systemIndigo, .systemPink])
         LAST.font = UIFont.semibold(fontSize: 35)
         OFF.font = UIFont.black(fontSize: 55)
         trueMusicFans.font = UIFont.semibold(fontSize: 15)
+        pauseStartObservers()
         
-        //Observers
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(myObserverMethod),
-                                               name:UIApplication.didEnterBackgroundNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(applicationWillEnterForeground),
-                                               name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
     //MARK: - SetupNewGradientButtonNEW
@@ -130,6 +123,7 @@ class ViewController: UIViewController {
         //secondsLabel.pushTransition(0.4)
         //secondsLabel.text = "AppConstans.seconds"
         //secondsLabel.fadeTransition(0.8)
+        secondsLabel.pushTransition(0.4)
         secondsLabel.font = UIFont.boldSystemFont(ofSize: 20)
         secondsLabel.clipsToBounds = true
         secondsLabel.layer.cornerRadius = 12
@@ -208,7 +202,6 @@ class ViewController: UIViewController {
         case err
     }
     
-    //conventer
     func timeToSeconds(for time: String) throws -> Int {
         
         let metrics = time.split(separator: ":")
@@ -221,13 +214,25 @@ class ViewController: UIViewController {
         return days*86400 + hours*3600 + minutes*60 + seconds
     }
     
-    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
+//    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+//        return UIColor(
+//            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+//            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+//            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+//            alpha: CGFloat(1.0)
+//        )
+//    }
+    
+    //MARK: - Observers
+    func pauseStartObservers () {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(myObserverMethod),
+                                               name:UIApplication.didEnterBackgroundNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(applicationWillEnterForeground),
+                                               name: UIApplication.willEnterForegroundNotification, object: nil)
     }
+    
     
 }
