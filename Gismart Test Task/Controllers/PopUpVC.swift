@@ -16,6 +16,7 @@ class PopUpVC: UIViewController {
     var daysFromVC: String?
     
     @IBOutlet weak var popUpView: UIView!
+    @IBOutlet weak var greatLabel: UILabel!
     @IBOutlet weak var popUpLabel: UILabel!
     
     override func viewDidLoad() {
@@ -50,6 +51,6 @@ class PopUpVC: UIViewController {
         popUpView.layer.cornerRadius = 25
         popUpLabel.backgroundColor = nil
         popUpLabel.textColor = .white
-        popUpView.doGlowAnimation(withColor: .white)
+        greatLabel.doGlowAnimation(withColor: .systemBackground)
     }
 }

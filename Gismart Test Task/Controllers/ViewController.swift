@@ -29,7 +29,20 @@ class ViewController: UIViewController {
     
     //MARK: - @IBAction
     @IBAction func showPopUp(_ sender: UIButton) {
+        
         timer.invalidate()
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "sbPopUpID") as! PopUpVC
+        popOverVC.didMove(toParent: self)
+        popOverVC.secFromVC = secondsLabel.text
+        popOverVC.minFromVC = minutesLabel.text
+        popOverVC.hourFromVC = hoursLabel.text
+        popOverVC.daysFromVC = daysLabel.text
+        self.addChild(popOverVC)
+        popOverVC.didMove(toParent: self)
+        popOverVC.view.frame = self.view.frame
+        popOverVC.didMove(toParent: self)
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParent: self)
     }
     
     //MARK: - viewDidLoad()
@@ -76,18 +89,6 @@ class ViewController: UIViewController {
         popUpOutlet.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         popUpOutlet.clipsToBounds = true
         popUpOutlet.layer.cornerRadius = 12
-    }
-    
-    //MARK: - PrepareForSegue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let sec = segue.destination as? PopUpVC else { return }
-        sec.secFromVC = secondsLabel.text
-        guard let min = segue.destination as? PopUpVC else { return }
-        min.minFromVC = minutesLabel.text
-        guard let hour = segue.destination as? PopUpVC else { return }
-        hour.hourFromVC = hoursLabel.text
-        guard let day = segue.destination as? PopUpVC else { return }
-        day.daysFromVC = daysLabel.text
     }
     
     //MARK: - FadeAnimation

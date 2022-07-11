@@ -269,6 +269,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jl2-Yk-RmN"/>
                     <connections>
+                        <outlet property="greatLabel" destination="0lJ-VQ-M5K" id="PJ9-oF-rVb"/>
                         <outlet property="popUpLabel" destination="1oe-jB-9Wk" id="3Qm-a8-q8h"/>
                         <outlet property="popUpView" destination="sjx-S5-XVe" id="hxh-BH-qAd"/>
                     </connections>
